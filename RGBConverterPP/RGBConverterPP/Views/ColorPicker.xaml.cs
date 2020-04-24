@@ -6,14 +6,20 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using RGBConverterPP.ViewModels;
 
-namespace RGBConverterPP
+
+namespace RGBConverterPP.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Values : ContentPage
+    public partial class ColorPicker : ContentPage
     {
-        public Values()
+        RGBConverterViewModel viewModel;
+
+        public ColorPicker()
         {
+            BindingContext = viewModel = new RGBConverterViewModel();
+
             InitializeComponent();
         }
     }

@@ -4,31 +4,28 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="RGBConverterPP.Values"
-             xmlns:RGBConverter="clr-namespace:RGBConverterPP.ViewModels">
-    <!--<ContentPage.DataContext>
-        <RGBConverter:ColorPickerViewModel/>
-    </ContentPage.DataContext>-->
-
+             x:Class="RGBConverterPP.Views.ColorPicker"
+             xmlns:vm="clr-namespace:RGBConverterPP.ViewModels">
+    
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Slider">
                 <Setter Property="Maximum" Value="255"/>
             </Style>
-            
+
             <Style TargetType="Label">
                 <Setter Property="HorizontalTextAlignment" Value="Center"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-
+    
     <ContentPage.Content>
         <StackLayout Margin="10" BackgroundColor="BlanchedAlmond">
             <Label Text="Welcome to the RGBConverter"/>
-            <BoxView x:Name="boxView" Color="#00FF00" VerticalOptions="FillAndExpand"/>
-            <Slider x:Name="sliderRed" ThumbColor="Red" Value="0"/>
-            <Slider x:Name="sliderGreen" ThumbColor="Green" Value="0"/>
-            <Slider x:Name="sliderBlue" ThumbColor="Blue" Value="0"/>
+            <BoxView x:Name="boxView" Color="{Binding Color}" VerticalOptions="FillAndExpand"/>
+            <Slider x:Name="sliderRed" ThumbColor="Red" Value="{Binding RedOfColorPicker}"/>
+            <Slider x:Name="sliderGreen" ThumbColor="Green" Value="{Binding GreenOfColorPicker}"/>
+            <Slider x:Name="sliderBlue" ThumbColor="Blue" Value="{Binding BlueOfColorPicker}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

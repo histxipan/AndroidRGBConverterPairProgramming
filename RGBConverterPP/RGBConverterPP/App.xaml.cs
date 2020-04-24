@@ -12,7 +12,7 @@ namespace RGBConverterPP
         {
             InitializeComponent();
 
-            MainPage = new HelloWorld();
+            MainPage = new ColorPicker();
         }
 
         protected override void OnStart()
