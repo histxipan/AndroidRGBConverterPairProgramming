@@ -26,6 +26,9 @@
             <Slider x:Name="sliderRed" ThumbColor="Red" Value="{Binding RedOfColorPicker}"/>
             <Slider x:Name="sliderGreen" ThumbColor="Green" Value="{Binding GreenOfColorPicker}"/>
             <Slider x:Name="sliderBlue" ThumbColor="Blue" Value="{Binding BlueOfColorPicker}"/>
+            <Label x:Name="redLabel" Text="{Binding RedOfColorPicker, StringFormat='Red = {0:N0}'}" />
+            <Label x:Name="greenLabel" Text="{Binding GreenOfColorPicker, StringFormat='Green = {0:N0}'}"/>
+            <Label x:Name="blueLabel" Text="{Binding BlueOfColorPicker, StringFormat='Blue = {0:N0}'}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

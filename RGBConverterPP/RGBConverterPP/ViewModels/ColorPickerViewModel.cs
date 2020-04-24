@@ -53,7 +53,7 @@ namespace RGBConverterPP.ViewModels
         {
             get
             {
-                color = Color.FromRgb(_currentColor.Red, _currentColor.Green, _currentColor.Blue);
+                color = Color.FromRgb(Convert.ToInt32(_currentColor.Red), Convert.ToInt32(_currentColor.Green), Convert.ToInt32(_currentColor.Blue));
                 return color;
             }
 
